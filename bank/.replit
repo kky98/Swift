@@ -1,0 +1,15 @@
+compile = ["swiftc", "-o", "main", "main.swift"]
+run = ["./main"]
+
+entrypoint = "main.swift"
+
+hidden = ["main"]
+
+[nix]
+channel = "stable-21_11"
+
+[languages.swift]
+pattern = "**/*.swift"
+
+[languages.swift.languageServer]
+start = ["sourcekit-lsp"]
